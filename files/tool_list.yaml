@@ -1,3 +1,5 @@
+# This is just a sample file. For a fully documented version of this file, see
+# https://github.com/galaxyproject/ansible-galaxy-tools/blob/master/files/tool_list.yaml.sample
 tools:
 - name: 'column_maker'
   owner: 'devteam'
