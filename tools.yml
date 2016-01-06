@@ -1,7 +1,9 @@
 - hosts: localhost
+  gather_facts: False
   connection: local
   vars:
-      galaxy_tools_tool_list_file: files/tool_list.yaml
+      # galaxy_tools_tool_list_file: files/tool_list.yaml
+      galaxy_tools_tool_list: files/tool_list.yaml
       galaxy_tools_galaxy_instance_url: http://127.0.0.1:8080/
       # galaxy_tools_api_key: <API key for Galaxy admin user>
   roles:
