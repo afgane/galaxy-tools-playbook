@@ -6,4 +6,4 @@
       galaxy_tools_galaxy_instance_url: http://127.0.0.1:8080/
       # galaxy_tools_api_key: <API key for Galaxy admin user>
   roles:
-      - galaxy_tools
+      - galaxyprojectdotorg.galaxy-tools
