@@ -7,7 +7,8 @@ Before you can use this playbook, you need to install [Ansible][ans]:
 To use, clone this repo and provide a list of tools to install via
 `files/tool_list.yaml` file. Then, run the playbook:
 
-    $ git clone --recursive git@github.com:afgane/galaxy-tools-playbook.git
+    $ git clone https://github.com/afgane/galaxy-tools-playbook.git
+    $ ansible-galaxy install -f -r requirements_roles.yml -p roles
     # Provide a list of tools in files/tool_list.yaml
     $ ansible-playbook tools.yml -i "localhost," --extra-vars galaxy_tools_api_key=<Admin user API key>
 
