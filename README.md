@@ -4,15 +4,15 @@ Before you can use this playbook, you need to install [Ansible][ans] (version
 2.1.2.0+ is required). Note that for the time being, this playbook does not
 work with Python 3.x.
 
-    $ git clone --recursive -b stable-2.1 https://github.com/ansible/ansible
-    $ pip install ansible/
+    $ pip install ansible virtualenv
 
-To use, clone this repo and provide a list of tools to install via
-`files/tool_list.yaml` file. Then, run the playbook:
+To use, clone this repo and provide a list of tools to install. A sample file
+if provided in `files/sample_tool_list.yaml`. , run the playbook:
 
     $ git clone https://github.com/afgane/galaxy-tools-playbook.git
     $ cd galaxy-tools-playbook && ansible-galaxy install -f -r requirements_roles.yml -p roles
-    # Provide a list of tools in files/tool_list.yaml
+    # Provide a list of tools in files/sample_tool_list.yaml
+    # Edit tools.yml if you're not targeting Galaxy on localhost:8080
     $ ansible-playbook tools.yml -i "localhost," --extra-vars galaxy_tools_api_key=<Admin user API key>
 
 In addition to the output from running the playbook, the installation script
